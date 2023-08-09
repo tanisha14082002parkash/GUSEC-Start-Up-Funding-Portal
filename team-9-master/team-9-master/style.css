@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+body {
+    background: url('image.jpg') ;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.sheduling-meet {
+    position: absolute;
+    background: rgb(228, 173, 234);
+    width: 50%;
+    padding: 40px;
+    margin: 100px auto;
+    font-family: cursive;
+
+     top: 0%;
+    left: 40%; 
+    transform: translate3d(-890%,-50%);
+    width: 350px; 
+}
+.sheduling-meet h1{
+    font-size: 40px;
+    text-shadow: 0ch;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+.sheduling-meet p{
+    font-size: 20px;
+    margin: 10px 0;
+}
+.sheduling-meet input{
+    font-size: 25px;
+    padding: 15 px 10px;
+    width: 100%;
+    border-radius: 0;
+    outline: none;
+}
+.sheduling-meet .btn input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: rgb(138, 212, 240);
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}

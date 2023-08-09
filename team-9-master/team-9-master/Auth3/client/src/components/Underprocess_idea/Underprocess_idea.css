@@ -1,0 +1,44 @@
+
+
+
+a:link {
+    text-decoration: none;
+    color:black;
+  font-family:"Helvetica";
+  font-size:large;
+  }
+  
+  a:visited{
+  color: black;
+  }
+  
+  a:hover{
+  color:rgb(18, 156, 156);
+  }
+
+
+#root{
+    background-color: white;
+}
+#cards{
+    
+    font-family:'Helvetica';
+    height:250px;
+    width:850px;
+    margin-left:23%;
+    padding:10px;
+    border-radius:5px;
+    
+    display:inline-block;
+    background-color:white;
+    
+}
+
+
+#h11{
+    margin-left:8%;
+}
+
+#h22{
+    margin-left:10%;
+}

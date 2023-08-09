@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>More Details</title>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+#but_style7{
+        border:none;
+        color:white;
+        font-size:15px;
+        width:215px;
+        border-radius:25px;
+	margin-left:4%;
+        height:36px;
+        background-color:rgb(18, 156, 156);
+    }
+
+
+input{
+border-radius:5px;
+height:23px;
+}
+
+select{
+border-radius:5px;
+height:23px;
+}
+
+body{
+margin-left:5px;
+margin-top:0;
+}
+a:link {
+  text-decoration: none;
+  color:black;
+font-family:"Helvetica";
+}
+
+a:visited{
+color: black;
+}
+
+a:hover{
+color:rgb(18, 156, 156);
+}
+#const{
+margin-left:40%;}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+padding:18px;
+width:40%;
+margin-left:30%;
+}
+
+#footer{
+background-color:black;
+padding:18px;
+color:white;
+}
+
+
+#top1{
+margin-left:28.5%;
+}
+</style>
+
+</head>
+<body>
+
+
+
+
+<div id="container">
+</div>
+<div id="top1">
+    <h2>To Enter the Grant Details, user need to submit below details:</h2>
+</div>    
+<table>
+        <tr>
+            <th>Date</th>
+            <th>Selection</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Status</th>
+            
+        </tr>
+        <% for(var i=0; i < result.length; i++) { %>
+            <tr>
+              <td><%= result[i].date %></td>
+              <td><%= result[i].selection %></td>
+              <td><%= result[i].amount %></td>
+              <td><%= result[i].description %></td>
+              <td><select class="status" data-id="<%= result[i].selection %>">
+                <option value="requested" <% if (result[i].status == 'requested'){ %>
+                    selected
+                    <% } %>
+                     >Requested</option>
+                <option value="accept" <% if (result[i].status == 'accept'){ %>
+                    selected
+                    <% } %>
+                     >Accept</option>
+                <option value="decline" <% if (result[i].status == 'decline'){ %>
+                    selected
+                    <% } %>
+                     >Decline</option>
+              </select></td>
+            </tr>
+         <% } %>
+    </table>
+<br/><br/><br/>
+<div id="const">
+    <label for="Fund channel">Fund channel: </label>
+    <select id="Fund channel">
+    <option value="Fund channel">Select fund channel</option>
+    <option value="SSIP">SSIP</option>
+    <option value="GOG">GOG</option>
+    <option value="SAS">SAS</option>
+    <option value="DST">DST</option>
+</select>
+<br>
+<br/><br/>
+    <label>Approved Amount: </label>
+    <input type="text" name="amount">
+    <br>
+<br/><br/>
+    <label>Head-wise Maximum Amount: </label>
+    <select id="amount">
+        <option value="amount">Select an option</option>
+        <option value="EG marketing">EG marketing</option>
+        <option value="Prototyping">Prototyping</option>
+    </select>
+<br/>
+<br/>
+<button id="but_style7" >Submit</button>
+    </div>
+<br/>
+<br/><br/>
+
+
+<div id="footer">
+
+<img src="logo2.png" height=175 marginLeft=25 width=175>
+<div style="display:inline-block;position:relative;top:40;left:20;fontFamily:Sans-serif">
+<p>Instagram: @GUSEC</p>
+<p>Twitter: @GUSEC</p>
+<p>Facebook: @GUSEC</p>
+<div>
+
+<div style="display:inline-block;position:relative;top:-95;right:-1000;Family:Sans-serif">
+<p>Email: GUSEC2022@gmail.com</p>
+<p>Contact-No: +1025421XX</p>
+
+</div>
+
+
+</div>
+
+
+
+<script type="text/babel">
+
+
+class Logo extends React.Component{
+render(){
+var divstyle={height:100,width:145,marginLeft:15,display:'Inline-Block',position:'relative',top:-20};
+return(
+<div style={divstyle}>
+<img src="logo2.png" height='140' width='195'></img>
+</div>
+);
+}
+
+}
+
+class Tag extends React.Component{
+render(){
+var divstyle={textAlign:"center",height:20,width:216,backgroundColor:"white",color:"black",display:"inline-block"}
+
+return(
+<div style={divstyle}>
+<a href={this.props.hrefs}>{this.props.name}</a>
+</div>
+);
+}
+}
+
+
+
+class Menu extends React.Component{
+render(){
+var divstyle={marginLeft:138,padding:10,marginTop:0,display:'inline-block',position:'relative',top:-82};
+return(
+<div style={divstyle}>
+<Tag hrefs="http://localhost:3000/homeadmin" name="Home"></Tag>
+<Tag hrefs="http://localhost:3000/dashboard" name="Available Requests"></Tag>
+<Tag hrefs="http://localhost:3000/reviewmeeting" name="Review Meetings"></Tag>
+<Tag hrefs="http://localhost:4248/section5admin" name="Grant Details"></Tag>
+
+</div> 
+
+
+);
+
+
+
+}
+}
+
+
+class LoginButton extends React.Component{
+mouseEvent=(event)=>{
+event.target.style.backgroundColor="black";
+event.target.style.color="white";
+event.target.style.cursor="pointer";
+}
+mouseEvent2=(event)=>{
+event.target.style.backgroundColor="rgb(18, 156, 156)";
+event.target.style.color="white";
+event.target.style.cursor="pointer";
+}
+
+handleClick=()=>{
+window.location.href='http://localhost:3000';
+}
+
+render(){
+var divstyle={display:'inline-block',position:'relative',top:-82,left:75};
+var but_style={border:'none',color:'white',fontSize:'15px',width:'225px',borderRadius:'25px',height:'36px',backgroundColor:'rgb(18, 156, 156)'};
+return(
+<div style={divstyle}>
+<input id='signup' type='button' onClick={this.handleClick} value='Log Out' style={but_style} onMouseLeave={this.mouseEvent2} onMouseOver={this.mouseEvent}/>
+</div>
+);
+
+}
+
+}
+
+
+
+ReactDOM.render(<div><Logo/><Menu/><LoginButton/></div>,document.getElementById('container'));
+
+
+</script>
+
+
+
+
+</body>
+<script>
+
+
+    document.addEventListener('DOMContentLoaded', _ => {
+        
+        document.querySelectorAll(".status").forEach(el => {
+            console.log("HELLOW");
+        el.addEventListener('change', e => {
+            const status = e.target.value
+            const req_id = e.target.getAttribute('data-id')
+            console.log(status, req_id);
+            fetch('/request_grant/update', {
+                method: "put",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    selection: req_id,
+                    status: status
+                })
+            }).then(res => {
+                console.log(res)
+            })
+        })
+    })
+    })
+    
+</script>
+</html>

@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>Home Page</title>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+margin-left:5;
+margin-top:0;
+}
+a:link {
+  text-decoration: none;
+  color:black;
+font-family:"Helvetica";
+}
+
+a:visited{
+color: black;
+}
+
+a:hover{
+color:rgb(18, 156, 156);
+}
+
+
+
+
+#footer{
+background-color:black;
+padding:18;
+color:white;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+
+<div id="container">
+</div>
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div id="footer">
+
+<img src="logo2.png" height=175 marginLeft=25 width=175>
+<div style="display:inline-block;position:relative;top:40;left:20;fontFamily:Sans-serif">
+<p>Instagram: @GUSEC</p>
+<p>Twitter: @GUSEC</p>
+<p>Facebook: @GUSEC</p>
+<div>
+
+<div style="display:inline-block;position:relative;top:-95;right:-1000;Family:Sans-serif">
+<p>Email: GUSEC2022@gmail.com</p>
+<p>Contact-No: +1025421XX</p>
+
+</div>
+
+
+</div>
+
+
+
+
+<script type="text/babel">
+
+
+class Logo extends React.Component{
+render(){
+var divstyle={height:100,width:145,marginLeft:15,display:'Inline-Block',position:'relative',top:-20};
+return(
+<div style={divstyle}>
+<img src="logo2.png" height='140' width='195'></img>
+</div>
+);
+}
+
+}
+
+class Tag extends React.Component{
+render(){
+var divstyle={textAlign:"center",height:20,width:216,backgroundColor:"white",color:"black",display:"inline-block"}
+
+return(
+<div style={divstyle}>
+<a href={this.props.hrefs}>{this.props.name}</a>
+</div>
+);
+}
+}
+
+
+
+class Menu extends React.Component{
+render(){
+var divstyle={marginLeft:138,padding:10,marginTop:0,display:'inline-block',position:'relative',top:-82};
+return(
+<div style={divstyle}>
+<Tag hrefs="home.html" name="Home"></Tag>
+<Tag hrefs="available_requests.html" name="Available Requests"></Tag>
+<Tag hrefs="requests_history.html" name="Requests History"></Tag>
+<Tag hrefs="loginPage.html" name="Log Out"></Tag>
+
+</div> 
+
+
+);
+
+
+
+}
+}
+
+
+class LoginButton extends React.Component{
+mouseEvent=(event)=>{
+event.target.style.backgroundColor="black";
+event.target.style.color="white";
+event.target.style.cursor="pointer";
+}
+mouseEvent2=(event)=>{
+event.target.style.backgroundColor="rgb(18, 156, 156)";
+event.target.style.color="white";
+event.target.style.cursor="pointer";
+}
+
+handleClick=()=>{
+window.location.href='http://localhost:3000';
+}
+
+render(){
+var divstyle={display:'inline-block',position:'relative',top:-82,left:75};
+var but_style={border:'none',color:'white',fontSize:'15px',width:'225px',borderRadius:'25px',height:'36px',backgroundColor:'rgb(18, 156, 156)'};
+return(
+<div style={divstyle}>
+<input id='signup' type='button' onClick={this.handleClick} value='Chat Room' style={but_style} onMouseLeave={this.mouseEvent2} onMouseOver={this.mouseEvent}/>
+</div>
+);
+
+}
+
+}
+
+
+
+ReactDOM.render(<div><Logo/><Menu/><LoginButton/></div>,document.getElementById('container'));
+
+
+</script>
+
+
+
+
+</body>
+</html>

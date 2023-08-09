@@ -1,0 +1,180 @@
+html{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+  margin-left:0px;
+  margin-top:0px;
+  background-color: white;
+  }
+  .bodyy{
+    background-color: white;
+  }
+#root{
+    background-color: white;
+}
+  a:link {
+    text-decoration: none;
+    color:black;
+  font-family:"Helvetica";
+  }
+  
+  a:visited{
+  color: black;
+  }
+  
+  a:hover{
+  color:rgb(18, 156, 156);
+  }
+
+  .footer{
+  background-color:black;
+  padding:18px;
+  color:white;
+  }
+
+.footer_div1{
+    display:inline-block;
+    position:relative;
+    top:-40px;
+    left:20px;
+    font-family:"Sans-serif";
+    line-height: 25px;
+    
+}
+#s2{
+    font-weight: bold;
+}
+
+#s1{
+    position:relative;
+    float:right;
+    right:100px;
+}
+
+#s8{
+    position:relative;
+    margin-left:0px;
+    float:left;
+    
+}
+
+.footer_div2{
+    display:inline-block;
+    position:relative;
+    top:-40px;
+    right:-850px;
+    font-family:"Sans-serif";
+    line-height: 25px;
+}
+
+.divstyle{
+    height:100;
+    width:145;
+    margin-left:15;
+    display:inline-Block;
+    position:relative;
+    top:-20;
+}
+
+.divstyle2{
+    text-align:center;
+    height:20px;
+    margin-left:135px;
+    width:150px;
+    background-color:white;
+    color:black;
+    display:inline-block;
+    position:relative;
+    top:-48px;
+}
+
+
+.divstyle3{
+    margin-left:138;
+    padding:10;
+    margin-top:-25;
+    display:inline-block;
+    position:relative;
+    top:0;
+}
+
+.divstyle4{
+    display:inline-block;
+    position:relative;
+    top:-45px;
+    left:75px;
+}
+
+.but_style{
+    border:none;
+    color:white;
+    font-size:15px;
+    width:225px;
+    border-radius:25px;
+    height:36px;
+    background-color:rgb(18, 156, 156)
+}
+
+.but_style2{
+    border:none;
+    color:white;
+    font-size:15px;
+    width:225px;
+    border-radius:25px;
+    height:36px;
+    margin-left:42%;
+    background-color:rgb(18, 156, 156)
+}
+
+
+.divstyle5{
+    text-align:center;
+    font-size:20px;
+    height:20px;
+    margin-left:38%;
+    width:300px;
+    background-color:white;
+    color:black;
+    font-family:'Helvetica';
+    display:inline-block;
+    position:relative;
+    top:-48px;
+}
+
+
+.img_div{
+    display:inline-block;
+    height:110px;
+    width:145px;
+}
+
+.img_div2{
+    display:inline-block;
+    height:410px;
+    width:445px;
+    margin-left:10%;
+}
+
+
+
+#cards{
+    
+    font-family:'Helvetica';
+    height:80px;
+    width:1055px;
+    margin-left:15%;
+    padding:10px;
+    border-radius:5px;
+    box-shadow:0px 0px 5px gray;
+    display:inline-block;
+    
+    
+}
+
+
+#p11{
+    text-align: left;
+    position:relative;
+    left:18px;
+}
