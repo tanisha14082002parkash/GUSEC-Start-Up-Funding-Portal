@@ -10,4 +10,4 @@ We have used MERN stack to build this portal. The forms and some webpages are de
 Here is a short video depicting the overall functional flow of the product:
 
      
-([[https://www.youtube.com/watch?v=Hc79sDi3f0U](https://youtu.be/VRKwZh-fVPY)https://youtu.be/VRKwZh-fVPY](https://youtu.be/VRKwZh-fVPY)https://youtu.be/VRKwZh-fVPY)
+[![Video][(https://img.youtube.com/vi/jXnoFqcAkQA/maxresdefault.jpg)](https://www.youtube.com/watch?v=jXnoFqcAkQA)]
